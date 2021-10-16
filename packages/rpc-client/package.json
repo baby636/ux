@@ -14,7 +14,9 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "prettier": {
     "printWidth": 80,
@@ -36,6 +38,8 @@
   },
   "dependencies": {
     "@blockstack/stacks-transactions": "0.7.0",
-    "cross-fetch": "^3.0.4"
-  }
+    "cross-fetch": "^3.0.4",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
