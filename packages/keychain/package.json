@@ -25,7 +25,9 @@
     "lint:prettier:fix": "prettier --write \"src/**/*.{ts,tsx}\" *.js",
     "depcheck": "depcheck --ignores='@types/*,eslint*,safe-buffer,codecov,@typescript-eslint/*,@blockstack/*'",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "unpkg": "./dist/keychain.cjs.production.min.js",
   "license": "MIT",
@@ -65,9 +67,11 @@
     "jsontokens": "^3.0.0",
     "prettier": "^2.0.5",
     "triplesec": "^3.0.27",
-    "zone-file": "^1.0.0"
+    "zone-file": "^1.0.0",
+    "@snyk/protect": "latest"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
