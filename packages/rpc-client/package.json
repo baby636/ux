@@ -14,7 +14,9 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "prettier": {
     "printWidth": 80,
@@ -27,8 +29,8 @@
     "@types/bn.js": "^4.11.6",
     "@types/jest": "^25.2.1",
     "bn.js": "^5.1.1",
-    "husky": "^4.2.3",
-    "tsdx": "^0.13.1",
+    "husky": "^4.3.7",
+    "tsdx": "^0.14.0",
     "tslib": "^1.11.1"
   },
   "publishConfig": {
@@ -36,6 +38,8 @@
   },
   "dependencies": {
     "@blockstack/stacks-transactions": "0.7.0",
-    "cross-fetch": "^3.0.4"
-  }
+    "cross-fetch": "^3.1.5",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
