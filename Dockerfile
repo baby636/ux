@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-get install -y build-essential python3 nodejs zip c
   && ./build-ext.sh /connect-extension.zip
 
 
-FROM alpine:latest
+FROM alpine:3.18.3
 COPY --from=builder /connect-extension.zip .
 
 # Wait for extension.zip to be copied into local
