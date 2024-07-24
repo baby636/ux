@@ -43,7 +43,7 @@
     "@types/triplesec": "^3.0.0",
     "codecov": "^3.5.0",
     "cross-env": "^6.0.3",
-    "depcheck": "^0.8.3",
+    "depcheck": "^1.4.0",
     "eslint": "^6.3.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^24.9.0",
